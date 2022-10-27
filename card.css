@@ -11,67 +11,88 @@
 }
 
 body{
+
     background-image: url(images/bg-main-desktop.png);
     background-repeat: no-repeat;
     background-size: 30% 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    
-    
+    margin: 0 auto;  
 }
-
-
 
 .container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     height: 600px;
-    gap: 7em;
-}
-
-.front, .back{
-    width: 90%;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
 }
 
 header{
+    width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2em;
+}
+
+.cardContent{
+    background-image: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    padding: 1em;
+}
+
+.logoimg{
+    width: 4em;
+    padding-bottom: 2.5em;
 }
 
 main{
     width: 30%;
 }
 
-.front{
-    position: relative;
-    align-self: flex-start;
+.cardback{
+    align-self: flex-end;
+    background-image: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
 }
 
-.card{
-    width: inherit;
-    position: absolute;
-    padding: 1.2em 0;
-    margin-left: 3em;
-    
-}
-
-.card img{
-    width: 4em;
-    padding-bottom: 2.5em;
-}
-
-.card h1{
-    font-size: 1.4em;
+.cardContent h1{
+    font-size: 1.6em;
     color: hsl(0, 0%, 100%);
     padding-bottom: 1em;
     letter-spacing: 0.02em;
     font-weight: 400;
+}
 
+.cardContent p{
+    color: hsl(0, 0%, 100%);
+    font-weight: 100;
+    font-size: 0.7em;
+}
+
+.number{
+    word-spacing: 1em;
+}
+
+.numb{
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 111px;
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
 }
 
 .errors{
@@ -79,35 +100,19 @@ main{
     flex-direction: column;
 }
 
-.card p{
-    color: hsl(0, 0%, 100%);
-    font-weight: 100;
-    font-size: 10px;
-}
+
+
+/* FORM STYLING */
 
 input:focus{
     border-color: red;
 }
 
-.name{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 
 #error, #give, #err, #dat, #yar{
     font-size: 0.6em;
     color: hsl(0, 100%, 66%);
-}
-.back{
-    position: relative;
-    align-self: flex-end;
-}
-
-.num{
-    position: absolute;
-    top: 18em;
-    left: 13em;
 }
 
 
@@ -127,17 +132,15 @@ input{
     width: 100%;
     outline: 0;
     margin-bottom: 0.5em;
+}
 
-    /* margin-top: 0.5em; */
-    /* margin-bottom: 0.5em; */
-
+#cardNumber{
+    word-spacing: 1em;
 }
 
 ::placeholder{
     color: hsl(270, 3%, 87%);
 }
-
-
 
 .cal{
     display: flex;
@@ -172,7 +175,7 @@ button{
     margin-top: 30px;
     text-align: center;
     background-color: hsl(278, 68%, 11%);
-    padding: 0.8em 1px;
+    padding: 1.2em 1px;
     border-radius: 0.4em;
     color: hsl(0, 0%, 100%);
     font-size: 13px;
@@ -195,26 +198,52 @@ button{
     padding-bottom: 1em;
 }
 
+@media (max-width: 900px){
 
-
-@media (max-width: 790px){
-    .container{
-        gap: 3em;
+    header{
+        width: 60%;
     
     }
+    
+}
+
+@media (max-width: 800px){
+
+   
+
+    header{
+        width: 80%;
+    
+    }
+
+
+    main{
+        width: 30%;
+    }
+
+
+
+}
+
+@media (max-width: 790px){
+    
 
     .date p{
         white-space: nowrap;
     }
 
     .logo h1{
-        font-size: 0.9em;
-        letter-spacing: 0.2em;
+        font-size: 0.8em;
+        letter-spacing: 0.3em;
     }
 
     .name{
-        justify-content: flex-start;
-        gap: 3em;
+        justify-content: space-between;
+    
+    }
+
+    .cardName{
+        font-size: 0.5em;
     }
 
 
@@ -226,31 +255,27 @@ button{
     body{
         background-image: url(images/bg-main-mobile.png);
         background-size: 700px 250px;
+        height: 1100px;
         
         
     }
     .container{
         flex-direction: column;
-        height: 680px;
-        /* gap: 10em; */
+        height: 1200px;
+        gap: 1em;
     
     }
 
     header{
         flex-direction: column-reverse;
-        height: 250px;
-        /* width: 80%; */
+        height: 600px;
+        width: 100%;
         gap: 1em;
     
     }
 
-    .logo h1{
-        font-size: 0.9em;
-        letter-spacing: 0.2em;
-    }
-
     .name{
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 3em;
     }
     main{
@@ -258,69 +283,25 @@ button{
     
     }
 
-    .back{
-        /* position: relative; */
-        width: 80%;
-
-    }
-
-    .front{
-        /* position: absolute; */
-        width: 80%;
-        margin-top: -80px;
-        /* top: 7em; */
-        z-index: 1;
-    }
-
-    .card{
-        
-        z-index: 1;
-        top: 7em;
-        
-    }
-
-    .card img{
-        padding-bottom: 1em;
-    }
-
-    .num {
-        top: -2em;
-        left: 13em;
-    }
-
 }
 
 
-@media (max-width: 390px){
+@media (max-width: 600px){
 
     header{
-        width: 80%;
-    }
-
-    .front, .back{
-        width: 90%;
-    }
-
-    .num {
-        
-        left: 10em;
-    }
-
-    .card{
-        margin-left: 1em;
-        top: 7.2em;
-        
-    }
-
-    .logo h1{
-        font-size: 0.9em;
-        letter-spacing: 0.2em;
+        width: 100%;
     }
 
     .name{
-        justify-content: flex-start;
-        gap: 3em;
+        justify-content: space-between;
     }
+
+    .cardContent{
+        width: 447px;
+        height: 245px;
+
+    }
+    
 
 }
 

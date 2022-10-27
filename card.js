@@ -61,7 +61,12 @@ function formBtn(e){
     else if (inputMonth.value.length > 2){
         err.innerText = "invalid"
     
-    }  else {
+    }  else if (inputMonth.value > 12){
+        err.innerText = "invalid month"
+
+    }
+    
+    else {
         err.innerText = ""
         month.innerText = inputMonth.value
     }
@@ -73,6 +78,9 @@ function formBtn(e){
     else if (inputYear.value.length > 4 || inputYear.value.length < 4){
         yar.innerText = "invalid"
     
+    }  else if (inputYear.value > 2023 || inputYear.value < 2021){
+        yar.innerText = "invalid year"
+
     }
     else {
         yar.innerText = ""
@@ -87,6 +95,8 @@ function formBtn(e){
     else if (inputCvc.value.length > 3 || inputCvc.value.length < 3){
         dat.innerText = "invalid"
     
+    } else if (inputCvc.value > 999){
+        dat.innerText = "invalid"
     }
     else {
         dat.innerText = ""
@@ -105,6 +115,11 @@ function formBtn(e){
         form.style.display = 'none'
         complete.style.display = 'block'
     }
+}
+
+const matchCardNumber = (text) => {
+    let pattern = /\d\d\d\d \d\d\d\d \d\d\d\d \d\d\d\d/
+    return text.match(pattern) == null? false: true
 }
 
 reset.addEventListener('click', function(e) {
