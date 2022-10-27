@@ -9,14 +9,15 @@ const inputYear = document.querySelector('#year');
 const year = document.querySelector('.expYear');
 const inputCvc = document.querySelector('#cvc');
 const numb = document.querySelector('.numb');
-const btn = document.querySelector('button')
-const reset = document.querySelector('#reset')
-const error = document.querySelector('#error')
-const err = document.querySelector('#err')
-const dat = document.querySelector('#dat')
-const yar = document.querySelector('#yar')
-const give = document.querySelector('#give')
-const complete = document.querySelector('.complete')
+const btn = document.querySelector('button');
+const reset = document.querySelector('#reset');
+const error = document.querySelector('#error');
+const err = document.querySelector('#err');
+const dat = document.querySelector('#dat');
+const yar = document.querySelector('#yar');
+const give = document.querySelector('#give');
+const complete = document.querySelector('.complete');
+const hide = document.querySelector('h2');
 let reg = /^[\d,\s,\+\-]{5,20}/;
 
 
@@ -47,6 +48,7 @@ function formBtn(e){
         give.style.color = "green";
         give.style.letterspacing
         card.innerText = inputNumber.value
+        // hide.style.display == 'block'
 
     } else {
         give.innerText = "wrong format, numbers only"

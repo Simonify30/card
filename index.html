@@ -36,10 +36,10 @@
       <form id="formCon">
         <label for="cardname">Cardholder Name</label> <br>
         <input type="text" name="username" id="username" placeholder="e.g. Jane Appleseed">
-        <h3 id="error"></h3><br>
+        <div id="error"></div><br>
         <label for="cardnumber">Card Number</label> <br>
         <input type="text" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
-        <h3 id="give"></h3><br>
+        <div id="give"></div><br>
         
         <div class="cal">
           <div class="date">
@@ -47,12 +47,12 @@
             <div class="calender">
               <div class="error">
                 <input type="number" min="0" max="12" name="month" id="month" placeholder="MM">
-                <h3 id="err"></h3><br>
+                <div id="err"></div><br>
               </div>
               
               <div class="errors">
                 <input type="number" name="year" id="year" placeholder="YY">
-                <h3 id="yar"></h3><br>
+                <div id="yar"></div><br>
             </div>
 
             </div>
@@ -62,7 +62,7 @@
             <p>cvc</p>
             <!-- <label for="cvc">CVC</label> <br> -->
             <input type="number" name="cvc" id="cvc" placeholder="  e.g. 123">
-            <h3 id="dat"></h3><br>
+            <div id="dat"></div><br>
 
           </div>
         </div>
@@ -72,7 +72,7 @@
       </form>
       <div class="complete">
         <img src="images/icon-complete.svg" alt="">
-        <h4>Thank you!</h4>
+        <h3>Thank you!</h3>
         <p>We've added your card details</p>
         <button type="reset" id="reset">Continue</button>
       </div>

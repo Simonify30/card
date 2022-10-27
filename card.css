@@ -81,7 +81,7 @@ main{
 }
 
 .number{
-    word-spacing: 1em;
+    word-spacing: 0.4em;
 }
 
 .numb{
@@ -192,7 +192,7 @@ button{
     padding-bottom: 2em;
 }
 
-.complete h4{
+.complete h3{
     font-size: 2em;
     font-weight: 400;
     padding-bottom: 1em;
@@ -232,10 +232,6 @@ button{
         white-space: nowrap;
     }
 
-    .logo h1{
-        font-size: 0.8em;
-        letter-spacing: 0.3em;
-    }
 
     .name{
         justify-content: space-between;
